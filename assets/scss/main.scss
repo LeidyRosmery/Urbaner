@@ -40,9 +40,10 @@ footer {
     padding: 2em 0;
 }
 
-#pc-img {
+.pc-img {
     max-width: 75%;
     height: auto;
+    display: none;
 }
 
 .img-pc {
@@ -77,6 +78,14 @@ footer {
 .link:hover {
     text-decoration: none;
     color: $secondary-color;
+}
+
+.active:hover .link {
+    color: $basic-color;
+}
+
+.img-active {
+    display: inline-block;
 }
 /***************** customers ****************/
 .customers {
@@ -217,15 +226,40 @@ footer {
     .list-customers {
         flex-direction: column;
     }
-
+    .text-detail {
+        padding-left: 0;
+    }
     .item-list,
     .list {
         width: 100%;
+        border: none;
     }
 
     .link-customer {
         width: 100%;
     }
+
+    .item-list{
+      border-radius: 0.3em;
+      font-size: 1.2em;
+      border: 0.1em solid;
+      padding: 0.2em 1em;
+      margin-bottom: .2em;
+      color: $brand-color;
+      background: $basic-color;
+    }
+    .link{
+      color: $brand-color;
+    }
+    .active{
+      background: $brand-color;
+      border-radius: 0.3em;
+      font-size: 1.2em;
+      border: none;
+      color: $basic-color;
+      padding: 0.2em 1em;
+    }
+
 }
 
 footer {}
