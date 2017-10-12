@@ -30,6 +30,7 @@ $width: 100%;
     background-color: #F5F5F5;
 }
 
+.badges,
 .benefits,
 .customers,
 .detail,
@@ -46,21 +47,24 @@ footer {
 
 .img-pc {
     text-align: right;
-}
-
-
-
-.list {
-    margin: 0 auto;
-    border: 0.1em solid #40df6d;
-    border-radius: 2em;
-    margin-top: 4em;
-    width: 36vw;
+    padding-right: 0;
 }
 
 .item-list {
+    width: $width/3;
+    list-style: none;
+}
+
+.active a {
+    color: #fff;
+}
+
+.active {
     display: inline-block;
-    width: 32.3%;
+    width: $width/3;
+    background-color: $brand-color;
+    border-radius: 2em;
+    margin: 0;
 }
 
 .link {
@@ -95,6 +99,24 @@ footer {
     width: 100%;
 }
 
+.list-badges {
+    @extend .list-customers;
+    //padding: 2.5em;
+}
+
+.list {
+    /*  margin: 0 auto;
+    border: 0.1em solid #40df6d;
+    border-radius: 2em;
+    margin-top: 4em;
+    */
+    @extend .list-customers;
+    border: 0.1em solid #40df6d;
+    border-radius: 2em;
+    margin-top: 4em;
+    width: 36vw;
+}
+
 .panel {
     background: $basic-color;
     padding: 2em 1.5em;
@@ -112,18 +134,22 @@ footer {
     font-size: 24px;
     line-height: 27px;
     color: $gray-light;
-    &__bold{
-      font-weight: 700;
-      font-size: 1.1em  ;
+
+    &__bold {
+        font-weight: 700;
+        font-size: 1.1em;
     }
+
     &__section {
         line-height: 1em;
         font-size: 2.8em;
         font-weight: bold;
     }
+
     &__blue {
         color: $brand-color;
     }
+
     &__gray {
         color: $gray-light;
     }
@@ -159,9 +185,15 @@ footer {
 .link-social {
     padding: 0 6em;
 }
-.link-customer{
-width: $width/7;
+
+.link-customer {
+    width: $width/7;
+
+    &__double {
+        width: $width/7*2;
+    }
 }
+
 .link-social img {
     width: 1.6em;
     margin: 0.5em;
@@ -171,14 +203,31 @@ width: $width/7;
     padding-top: 1.5em;
 }
 
+.text-detail {
+    padding-left: 7em;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 @media (max-width: 768px) {
-.list-customers{
-  flex-direction: column;
+    .list-customers {
+        flex-direction: column;
+    }
+
+    .item-list,
+    .list {
+        width: 100%;
+    }
+
+    .link-customer {
+        width: 100%;
+    }
 }
-.link-customer{
-  width: 100%;
-}
-}
+
 footer {}
 /*
 .enlace-nav {
