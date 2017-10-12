@@ -111,14 +111,21 @@ footer {
 .title {
     font-size: 24px;
     line-height: 27px;
+    color: $gray-light;
+    &__bold{
+      font-weight: 700;
+      font-size: 1.1em  ;
+    }
     &__section {
-        color: $gray-light;
         line-height: 1em;
         font-size: 2.8em;
         font-weight: bold;
     }
     &__blue {
         color: $brand-color;
+    }
+    &__gray {
+        color: $gray-light;
     }
 
     &__green {
@@ -152,7 +159,9 @@ footer {
 .link-social {
     padding: 0 6em;
 }
-
+.link-customer{
+width: $width/7;
+}
 .link-social img {
     width: 1.6em;
     margin: 0.5em;
@@ -162,6 +171,14 @@ footer {
     padding-top: 1.5em;
 }
 
+@media (max-width: 768px) {
+.list-customers{
+  flex-direction: column;
+}
+.link-customer{
+  width: 100%;
+}
+}
 footer {}
 /*
 .enlace-nav {
