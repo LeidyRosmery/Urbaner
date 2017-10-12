@@ -24,14 +24,22 @@ $width: 100%;
     background-size: 100%;
 }
 /***************** detail ****************/
-.detail {
+.badges,
+.detail,
+.info {
     background-color: #F5F5F5;
 }
-.detail , .benefits ,.customers {
-  padding: 2em 0;
+
+.benefits,
+.customers,
+.detail,
+.info,
+.register,
+footer {
+    padding: 2em 0;
 }
 
-.img-fluid {
+#pc-img {
     max-width: 75%;
     height: auto;
 }
@@ -40,12 +48,7 @@ $width: 100%;
     text-align: right;
 }
 
-.title-section {
-    color: $gray-light;
-    line-height: 1em;
-    font-size: 2.8em;
-    font-weight: bold;
-}
+
 
 .list {
     margin: 0 auto;
@@ -72,20 +75,94 @@ $width: 100%;
     color: $secondary-color;
 }
 /***************** customers ****************/
-.customers{
-  background-color: #6CADDF;
-}
-.list-customers {
-  display: flex;
-justify-content: space-around;
-align-items: center;
-width: 100%;
+.customers {
+    background-color: #6CADDF;
 }
 
-footer{
-  background-color:#262F36;
-  color: $basic-color;
+.btn-register {
+    background: $brand-color;
+    border-radius: 0.3em;
+    font-size: 1.2em;
+    border: none;
+    color: $basic-color;
+    padding: 0.5em 1em;
 }
+
+.list-customers {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.panel {
+    background: $basic-color;
+    padding: 2em 1.5em;
+
+    &__blue {
+        border-top: 0.5em solid $brand-color;
+    }
+
+    &__green {
+        border-top: 0.5em solid #6CADDF;
+    }
+}
+
+.title {
+    font-size: 24px;
+    line-height: 27px;
+    &__section {
+        color: $gray-light;
+        line-height: 1em;
+        font-size: 2.8em;
+        font-weight: bold;
+    }
+    &__blue {
+        color: $brand-color;
+    }
+
+    &__green {
+        color: #6CADDF;
+    }
+
+    &__panel {
+        color: #b2b2b2;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 30px;
+    }
+}
+
+.pie-pagina {
+    background-color: #262F36;
+    color: $basic-color;
+}
+
+.pie-pagina select {
+    background: none;
+    border: none;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    border-bottom: 0.1em solid #fff;
+    padding: 0.5em 0;
+    margin-bottom: 2.5em;
+}
+
+.link-social {
+    padding: 0 6em;
+}
+
+.link-social img {
+    width: 1.6em;
+    margin: 0.5em;
+}
+
+.pdx2 {
+    padding-top: 1.5em;
+}
+
+footer {}
 /*
 .enlace-nav {
   color: $basic-color;

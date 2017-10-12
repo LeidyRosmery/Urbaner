@@ -16,24 +16,25 @@
   background-size: 100%; }
 
 /***************** detail ****************/
-.detail {
+.badges,
+.detail,
+.info {
   background-color: #F5F5F5; }
 
-.detail, .benefits, .customers {
+.benefits,
+.customers,
+.detail,
+.info,
+.register,
+footer {
   padding: 2em 0; }
 
-.img-fluid {
+#pc-img {
   max-width: 75%;
   height: auto; }
 
 .img-pc {
   text-align: right; }
-
-.title-section {
-  color: #606060;
-  line-height: 1em;
-  font-size: 2.8em;
-  font-weight: bold; }
 
 .list {
   margin: 0 auto;
@@ -60,15 +61,69 @@
 .customers {
   background-color: #6CADDF; }
 
+.btn-register {
+  background: #40DF6D;
+  border-radius: 0.3em;
+  font-size: 1.2em;
+  border: none;
+  color: #fff;
+  padding: 0.5em 1em; }
+
 .list-customers {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100%; }
 
-footer {
+.panel {
+  background: #fff;
+  padding: 2em 1.5em; }
+  .panel__blue {
+    border-top: 0.5em solid #40DF6D; }
+  .panel__green {
+    border-top: 0.5em solid #6CADDF; }
+
+.title {
+  font-size: 24px;
+  line-height: 27px; }
+  .title__section {
+    color: #606060;
+    line-height: 1em;
+    font-size: 2.8em;
+    font-weight: bold; }
+  .title__blue {
+    color: #40DF6D; }
+  .title__green {
+    color: #6CADDF; }
+  .title__panel {
+    color: #b2b2b2;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 30px; }
+
+.pie-pagina {
   background-color: #262F36;
   color: #fff; }
+
+.pie-pagina select {
+  background: none;
+  border: none;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  border-bottom: 0.1em solid #fff;
+  padding: 0.5em 0;
+  margin-bottom: 2.5em; }
+
+.link-social {
+  padding: 0 6em; }
+
+.link-social img {
+  width: 1.6em;
+  margin: 0.5em; }
+
+.pdx2 {
+  padding-top: 1.5em; }
 
 /*
 .enlace-nav {
