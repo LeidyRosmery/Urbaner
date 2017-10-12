@@ -1,0 +1,93 @@
+$basic-color: #fff;
+$secondary-color: #909090;
+$gray-light: #606060;
+$brand-color: #40DF6D;
+$width: 100%;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Proxima Nova Rg';
+}
+@font-face {
+    font-family: 'Proxima Nova Rg';
+    src: url('../img/fonts/ProximaNova-Bold.eot'), url('../img/fonts/ProximaNova-Bold.otf');
+}
+
+.hero {
+    background-image: url("../img/backgroundHomeD.jpg");
+    background-repeat: no-repeat;
+    height: 80vh;
+    display: flex;
+    font-family: 'Proxima Nova Rg';
+    background-size: 100%;
+}
+/***************** detail ****************/
+.detail {
+    background-color: #F5F5F5;
+}
+.detail , .benefits ,.customers {
+  padding: 2em 0;
+}
+
+.img-fluid {
+    max-width: 75%;
+    height: auto;
+}
+
+.img-pc {
+    text-align: right;
+}
+
+.title-section {
+    color: $gray-light;
+    line-height: 1em;
+    font-size: 2.8em;
+    font-weight: bold;
+}
+
+.list {
+    margin: 0 auto;
+    border: 0.1em solid #40df6d;
+    border-radius: 2em;
+    margin-top: 4em;
+    width: 36vw;
+}
+
+.item-list {
+    display: inline-block;
+    width: 32.3%;
+}
+
+.link {
+    cursor: pointer;
+    display: block;
+    padding: 0.3em 1em;
+    color: $secondary-color;
+}
+
+.link:hover {
+    text-decoration: none;
+    color: $secondary-color;
+}
+/***************** customers ****************/
+.customers{
+  background-color: #6CADDF;
+}
+.list-customers {
+  display: flex;
+justify-content: space-around;
+align-items: center;
+width: 100%;
+}
+
+footer{
+  background-color:#262F36;
+  color: $basic-color;
+}
+/*
+.enlace-nav {
+  color: $basic-color;
+  text-decoration: none;
+}*/
