@@ -35,7 +35,7 @@
 
 .error,
 .validacion {
-    visibility: hidden;
+    display: none;
     line-height: 23px;
     color: #D55C4B;
     font-size: 13px;
@@ -58,6 +58,7 @@ form .input-login {
     background: none;
     border-bottom: solid 0.1em #CCCCCC;
     font-size: 1.2em;
+    margin-bottom: 0.5em;
 }
 
 .input-login::placeholder {

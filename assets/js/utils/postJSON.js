@@ -4,7 +4,6 @@ const cb = {
 };
 
 const autentica = (e) => {
-
 cb.email = $("#correo").val();
 cb.pass = $("#pass").val();
 const jqxhr = $.post('https://api.sandbox.urbaner.com/api/client/authenticate/jwt/', {
@@ -16,7 +15,8 @@ const jqxhr = $.post('https://api.sandbox.urbaner.com/api/client/authenticate/jw
     })
     .fail((e) => {
         $('.error').text(e.responseJSON.non_field_errors[0]);
-        $('.error').css('visibility', ' visible');
+        $('.error').css('display', ' block');
+        $('.input-login').val("");
     });
 
 }

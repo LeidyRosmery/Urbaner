@@ -2,13 +2,13 @@ $("#valid").submit(function(event) {
     event.preventDefault();
     if ($('#correo').val() == "") {
         $('.valid-correo').text('este campo es requerido');
-        $('.valid-correo').css('visibility', ' visible');
+        $('.valid-correo').css('display', 'block');
     } else {
         $('.valid-correo').empty();
     }
     if ($('#pass').val() == "") {
         $('.valid-pass').text('este campo es requerido');
-        $('.valid-pass').css('visibility', ' visible');
+        $('.valid-pass').css('display', ' block');
     } else {
         $('.valid-pass').empty();
     }
@@ -25,14 +25,14 @@ $('#correo').on("keyup", function(e) {
         $('.valid-correo').empty();
     } else {
         $('.valid-correo').text('ingrese un correo valido');
-        $('.valid-correo').css('visibility', ' visible');
+        $('.valid-correo').css('display', ' block');
     }
 });
 
 $('#pass').on("keyup", function(e) {
     if ($('#pass').val() == "") {
         $('.valid-pass').text('este campo es requerido');
-        $('.valid-pass').css('visibility', ' visible');
+        $('.valid-pass').css('display', ' block');
     } else {
         $('.valid-pass').empty();
     }
