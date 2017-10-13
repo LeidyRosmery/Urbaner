@@ -4,11 +4,6 @@ $("#toggle").on("click", function(event) {
     $(".nav-head").toggleClass("open");
     $(".list-nav").toggleClass('flex');
     $(".nav-items").toggleClass("toggle-menu");
-
-});
-
-$(".link").click((event) => {
-    event.preventDefault();
 });
 
 $('.item-list').on('click', function(e) {
