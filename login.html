@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+
+        <nav class="nav-login">
+            <img class="img-login" src="assets/img/logoBlanco.png" alt="">
+        </nav>
+    </header>
+
+   <form class="" action="index.html" id="valid" method="post">
+        <div class="logIn">
+            <h3 class="text-center">INICIAR SESION</h3>
+        </div>
+        <span class="error">No puede iniciar sesión con las credenciales proporcionadas.</span>
+        <input id="correo" class="input-login" type="text" name="email" value="" placeholder="Email">
+        <span class="validacion valid-correo">Ingrese un email válido.</span>
+        <input id="pass" class="input-login" type="text" name="pass" value="" placeholder="Contraseña">
+        <span class="validacion valid-pass" >Este campo es rquerido.</span>
+        <input class="btn-login" type="submit" name="" value="INICIAR SESION">
+        <input class="btn-fb" type="button" name="" value="CONTINUAR CON FACEBOOK">
+        <a class="help" href="">¿Olvidó su Contraseña?</a>
+        <p> ¿No tienes cuenta? <a class="help" href="">  Registrate</a></p>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/utils/postJSON.js"></script>
+    <script type="text/javascript" src="assets/js/utils/validation.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+</body>
+
+</html>

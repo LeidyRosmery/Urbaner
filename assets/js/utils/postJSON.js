@@ -1,44 +1,22 @@
-/*const postJSON = (url,data,cb) => {
-  $.post(url,data,(response) => {
-    if (response) {
-      cb(null,response);
-    } else {
-      cb(new Error(response));
-    }
-  },'json');
+const cb = {
+    email: null,
+    pass: null,
+};
+
+const autentica = (e) => {
+
+cb.email = $("#correo").val();
+cb.pass = $("#pass").val();
+const jqxhr = $.post('https://api.sandbox.urbaner.com/api/client/authenticate/jwt/', {
+        email: cb.email,
+        password: cb.pass
+    })
+    .done((data) => {
+        $("#valid").empty().append('<div class=""><div class="logIn"><h3 class="text-center">BIENVENIDO</h3></div> <div class="text-center"><img src="assets/img/logoUrbanerBlackH.png"  alt=""><p class="text-center title__subSection">' + data.client.name + ' ' + data.client.last_name + '</p><p><strong>Phone :</strong>' + data.client.phone + '</p> <p><strong>Id :</strong>' + data.client.id + '</p> </div>');
+    })
+    .fail((e) => {
+        $('.error').text(e.responseJSON.non_field_errors[0]);
+        $('.error').css('visibility', ' visible');
+    });
+
 }
-
-$('#hola').click(function(){
-  $.post("https://api.sandbox.urbaner.com/api/client/authenticate/jwt/",
-       {
-         email: "prueba@urbaner.pe",
-         password: "Urbaner"
-       },
-       function(data,status){
-           console.log(data);
-           console.log(status);
-       });
-});
-*/
-$.ajax({
-    url: 'https://api.sandbox.urbaner.com/api/client/authenticate/jwt/',
-    method: 'POST',
-    contentType: 'application/json',
-    data: JSON.stringify({
-        email: "prueba@urbaner.pe",
-        password: "Urbaner"
-    }),
-    success: function(response) {
-        console.log(response);
-
-        if (response) {
-            alert("logueado con exito");
-        }
-
-    },
-    fail: function(request) {
-        if (request) {
-            alert("existe un error" + request.message);
-        }
-    }
-});

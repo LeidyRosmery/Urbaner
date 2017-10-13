@@ -1,4 +1,5 @@
 @import "header";
+@import "login";
 $basic-color: #fff;
 $secondary-color: #909090;
 $gray-light: #606060;
@@ -13,7 +14,15 @@ $width: 100%;
 }
 @font-face {
     font-family: 'Proxima Nova Rg';
-    src: url('../img/fonts/ProximaNova-Bold.eot'), url('../img/fonts/ProximaNova-Bold.otf');
+    src: url('../img/fonts/ProximaNova-Bold.eot'), url('../img/fonts/ProximaNova-Bold.otf'), url('../img/fonts/ProximaNova-Bold.svg'), url('../img/fonts/ProximaNova-Bold.ttf'), url('../img/fonts/ProximaNova-Bold.woff');
+}
+@font-face {
+    font-family: 'Proxima Nova Rg';
+    src: url('../img/fonts/ProximaNova-Regular.eot'), url('../img/fonts/ProximaNova-Regular.otf'), url('../img/fonts/ProximaNova-Regular.svg'), url('../img/fonts/ProximaNova-Regular.ttf'), url('../img/fonts/ProximaNova-Regular.woff');
+}
+@font-face {
+    font-family: 'Proxima Nova Lt';
+    src: url('../img/fonts/ProximaNova-Semibold.eot'), url('../img/fonts/ProximaNova-Semibold.otf'), url('../img/fonts/ProximaNova-Semibold.svg'), url('../img/fonts/ProximaNova-Semibold.ttf'), url('../img/fonts/ProximaNova-Semibold.woff');
 }
 
 .hero {
@@ -103,6 +112,11 @@ footer {
     padding: 0.5em 1em;
 }
 
+.btn-hero {
+    @extend .btn-register;
+    margin: 0.4em 0.8em;
+}
+
 .list-customers {
     display: flex;
     justify-content: space-around;
@@ -112,15 +126,9 @@ footer {
 
 .list-badges {
     @extend .list-customers;
-    //padding: 2.5em;
 }
 
 .list {
-    /*  margin: 0 auto;
-    border: 0.1em solid #40df6d;
-    border-radius: 2em;
-    margin-top: 4em;
-    */
     @extend .list-customers;
     border: 0.1em solid #40df6d;
     border-radius: 2em;
@@ -149,6 +157,10 @@ footer {
     &__bold {
         font-weight: 700;
         font-size: 1.1em;
+    }
+
+    &__subSection {
+        font-size: 26px;
     }
 
     &__section {
@@ -214,29 +226,51 @@ footer {
     padding-top: 1.5em;
 }
 
+.btn-sign {
+    padding: 0.5em 1.5em;
+    border-radius: 2em;
+    border: solid #fff 0.1em;
+    /* padding-top: 0.5em; */
+    /* padding-bottom: 0.5em; */
+    /* padding-left: 2em; */
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
 .text-detail {
     padding-left: 7em;
 }
 
 .flex {
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
 @media (max-width: 768px) {
+    .title__section {
+        font-size: 1.8em;
+    }
+
     .list-customers {
         flex-direction: column;
     }
-    .title__section{
-      text-align: center;
+
+    .pdx2 {
+        padding-top: 1em;
     }
-    .link-social{
-      padding: 2em;
+
+    .title__section {
+        text-align: center;
     }
+
+    .link-social {
+        padding: 0 2em;
+        text-align: center;
+    }
+
     .text-detail {
         padding-left: 0;
     }
+
     .item-list,
     .list {
         width: 100%;
@@ -247,36 +281,31 @@ footer {
         width: 100%;
     }
 
-    .item-list{
-      border-radius: 0.3em;
-      font-size: 1.2em;
-      border: 0.1em solid;
-      padding: 0.2em 1em;
-      margin-bottom: .6em;
-      color: $brand-color;
-      transition: all 0.4s;
-      background: $basic-color;
-    }
-    .link{
-      color: $brand-color;
-    }
-    .list{
-      margin: 0;
-    }
-    .active{
-      background: $brand-color;
-      border-radius: 0.3em;
-      font-size: 1.2em;
-      border: none;
-      color: $basic-color;
-      padding: 0.2em 1em;
+    .item-list {
+        border-radius: 0.3em;
+        font-size: 1.2em;
+        border: 0.1em solid;
+        padding: 0.2em 1em;
+        margin-bottom: 0.6em;
+        color: $brand-color;
+        transition: all 0.4s;
+        background: $basic-color;
     }
 
+    .link {
+        color: $brand-color;
+    }
+
+    .list {
+        margin: 0;
+    }
+
+    .active {
+        background: $brand-color;
+        border-radius: 0.3em;
+        font-size: 1.2em;
+        border: none;
+        color: $basic-color;
+        padding: 0.2em 1em;
+    }
 }
-
-footer {}
-/*
-.enlace-nav {
-  color: $basic-color;
-  text-decoration: none;
-}*/
