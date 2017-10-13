@@ -1,0 +1,87 @@
+.hidden{
+  display: none;
+}
+.nav-main{
+  position: relative;
+  right: 0;
+  left: 0;
+  width: 100vw;
+  height: 30vh;
+}
+.nav-items{
+
+}
+.item{
+  float: left;
+      padding: 1.5em;
+      cursor: pointer;
+      /* color: #fff; */
+      list-style: none;
+}
+.item a{
+  color: #fff;
+}
+.nav-head{
+float: left;
+    max-width: 260px;
+
+}
+.list-nav{
+  float: right;
+   padding: 1em 4em;
+
+}
+.img-logo{
+  width: 100%;
+  padding: 1.5em 2em;
+}
+
+/***************/
+.menu {
+  top: 30px;
+  height: .2em;
+  left: 40px;
+  position: relative;
+  width: 2.1em;
+  background: #fff;
+  transition: all 0.3s;
+}
+.menu::before {
+    top: -.7em;
+}
+
+.menu::after {
+    top: .7em;
+}
+
+.menu:before, .menu:after {
+    content: '';
+    width: 2.1em;
+    height: .2em;
+    display: block;
+    position: absolute;
+    background: #fff;
+    transition: all 0.3s;
+}
+
+.open .menu {
+    background: none ;
+}
+
+.open .menu:after {
+top: 0;
+    background: #fff ;
+    transform: rotate(45deg);
+}
+
+.open .menu:before {
+top: 0;
+    background: #fff ;
+    transform: rotate(-45deg);
+}
+/****************/
+@media (max-width: 768px) {
+  .hidden{
+    display: inline-block;
+  }
+}

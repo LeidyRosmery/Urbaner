@@ -1,3 +1,4 @@
+@import "header";
 $basic-color: #fff;
 $secondary-color: #909090;
 $gray-light: #606060;
@@ -21,7 +22,7 @@ $width: 100%;
     height: 80vh;
     display: flex;
     font-family: 'Proxima Nova Rg';
-    background-size: 100%;
+    background-size: cover;
 }
 /***************** detail ****************/
 .badges,
@@ -54,6 +55,7 @@ footer {
 .item-list {
     width: $width/3;
     list-style: none;
+    transition: all 0.4s;
 }
 
 .active a {
@@ -226,6 +228,12 @@ footer {
     .list-customers {
         flex-direction: column;
     }
+    .title__section{
+      text-align: center;
+    }
+    .link-social{
+      padding: 2em;
+    }
     .text-detail {
         padding-left: 0;
     }
@@ -244,12 +252,16 @@ footer {
       font-size: 1.2em;
       border: 0.1em solid;
       padding: 0.2em 1em;
-      margin-bottom: .2em;
+      margin-bottom: .6em;
       color: $brand-color;
+      transition: all 0.4s;
       background: $basic-color;
     }
     .link{
       color: $brand-color;
+    }
+    .list{
+      margin: 0;
     }
     .active{
       background: $brand-color;
