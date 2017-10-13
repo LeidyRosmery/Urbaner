@@ -7,9 +7,6 @@ $("#toggle").on("click", function(event) {
 
 });
 
-$(".link").click((event) => {
-    event.preventDefault();
-});
 
 $('.item-list').on('click', function(e) {
     $('.item-list').removeClass('active');

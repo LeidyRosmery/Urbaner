@@ -21,7 +21,6 @@
   float: left;
   padding: 1.5em;
   cursor: pointer;
-  /* color: #fff; */
   list-style: none; }
 
 .item a {
@@ -179,8 +178,7 @@ form {
   text-align: center;
   display: flex;
   flex-direction: column;
-  padding: 2em;
-  /* margin: 5em; */ }
+  padding: 2em; }
 
 form .input-login {
   border: none;
